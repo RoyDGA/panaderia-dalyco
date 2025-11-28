@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: rgb(153, 153, 255);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Navbar */
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  padding: 0.2rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 30rem;
+}
+
+#red-productos {
+  background-color: rgb(153, 153, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 0.4em;
+  text-decoration: none;
+  color: white;
+}
+
+#red-productos:hover {
+  background-color: rgb(102, 102, 255);
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  object-fit: contain;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3c91ce;
+  font-weight: 600;
+}
+
+/* Main */
+main {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  border-radius: 16px;
+  height: 500px;
+  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Eslogan */
+.eslogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 4rem;
+  flex-direction: column;
+  position: relative;
+  background-image: url('../assets/inicio-de-sesion.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 85%;
+  height: 100%;
+}
+
+.eslogan::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.logo-dalyco {
+  position: relative;
+  width: 70%;
+  height: auto;
+}
+
+.eslogan p {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Formulario de inicio de sesión */
+.Inicio_sesion {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(248, 255, 255);
+}
+
+.Inicio_sesion form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.contraseña-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  flex-direction: column;
+}
+
+.Inicio_sesion p {
+  font-size: 0.8rem;
+  color: #939393;
+}
+
+.Inicio_sesion p a {
+  color: #5D8BFF;
+  text-decoration: none;
+}
+
+.Inicio_sesion input {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  padding: 12px 10px 9px 5px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: #DEDEDE;
+  border-bottom: #a2a4ff 2px solid;
+  font-size: 16px;
+}
+
+.Inicio_sesion input:focus {
+  outline: none;
+  border: 2px solid #a2a4ff;
+}
+
+.Inicio_sesion button {
+  padding: 8px 30px;
+  font-size: 16px;
+  border: 2px solid #a2a4ff;
+  border-radius: 10px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.Inicio_sesion button:hover {
+  color: #17181d;
+  background-color: #a2a4ff;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .formulario {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .eslogan {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    height: 20%;
+  }
+
+  .eslogan p {
+    display: none;
+  }
+
+  .logo-dalyco {
+    max-width: 50%;
+    height: auto;
+  }
+}
